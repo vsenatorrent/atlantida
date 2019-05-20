@@ -1,0 +1,55 @@
+.team
+    background-image: url('../../../img/our-team-bg.png')
+    background-repeat: no-repeat
+    background-size: 100% 100%
+    padding: 60px 0
+
+.team-gallery
+    width: 75%
+    margin: 0 auto
+    display: flex   
+    justify-content: space-between
+    
+.team-gallery_item
+    width: 31.3%
+    position: relative
+
+.team-gallery_name
+    display: block  
+    font-family: Montserrat
+    font-size: 13px 
+    margin-bottom: 9px
+
+.team-gallery_work
+    display: block
+    font-family: "Crimson Text"
+    font-size: 14px
+    font-style: italic   
+    margin-bottom: 9px
+
+.team-gallery_img
+    width: 100%    
+
+.team-gallery_caption
+    width: calc(100% - 16px)
+    height: calc(100% - 16px)
+    position: absolute
+    top: 6px
+    left: 8px
+    background: rgba( 246, 246, 246, 0.9)
+    padding: 90% 20px 0
+    color: $dark-grey
+    text-align: left
+    opacity: 0
+    transition: opacity 0.5s ease-out
+
+.hr
+    display: block
+    height: 2px
+    width: 54%
+    background-color: #515151    
+    margin-bottom: 15px
+
+.team-gallery_item:hover
+    .team-gallery_caption
+        opacity: 1

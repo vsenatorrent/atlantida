@@ -1,0 +1,59 @@
+@import ./config/_fonts.sass
+@import ./config/_colors.sass
+@import ./component/_header.sass    
+@import ./component/pages/index/_main-screen.sass
+@import ./component/pages/index/_about.sass
+@import ./component/pages/index/_services.sass
+@import ./component/pages/index/_history.sass    
+@import ./component/pages/index/_team.sass  
+@import ./component/pages/index/_portfolio.sass  
+
+*, *:after, *:before
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+li 
+    list-style-type: none
+
+a
+    text-decoration: none    
+
+button
+    cursor: pointer
+
+.container
+    width: 100%
+    max-width: 1170px
+    margin: 0 auto
+    text-align: center    
+
+body 
+    // background-image: url('../../layouts/index.jpg')
+    // background-repeat: no-repeat
+    // background-position: 50% 0
+
+.main-header
+    font-family: "Amsdam"
+    font-size: 20px
+    text-transform: uppercase
+    letter-spacing: 0.44px
+    color: $dark-grey
+    background-image: url('../img/Line-black.png')
+    background-position: center bottom
+    background-repeat: no-repeat
+    padding: 24px 0
+    margin-bottom: 40px
+
+.main-desc    
+    font-family: "Crimson Text - Roman"
+    font-size: 14px
+    letter-spacing: 1.4px
+    color: $dark-grey
+    text-align: center
+    margin: 0 70px 40px
+
+.main_btn
+    font-family: Montserrat
+    font-size: 13px
+    border: 2px solid $dark-grey

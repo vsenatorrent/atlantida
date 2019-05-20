@@ -1,0 +1,74 @@
+.services
+    background-image: url('../../../img/services-bg.png')
+    background-repeat: no-repeat
+    padding: 70px 0 80px
+    background-position: center
+    .main-header
+        color: #fff
+        background-image: url("../img/line-white.png")
+    .main-desc
+        text-align: center
+        color: #cfcfcf
+        margin-bottom: 70px
+        
+.services_list
+    display: flex 
+    justify-content: space-between
+    
+.services_item
+    width: 23%
+    color: #d8d8d8    
+    // border: 2px solid #d8d8d8  
+    padding: 48px 0 40px
+    position: relative
+    &:before
+        content: ''
+        display: block
+        width: 65px
+        height: 65px
+        background-position: center
+        background-repeat: no-repeat
+        position: absolute
+        top: calc(0% - 65px/2)
+        left: calc(50% - 65px/2)
+    &:after
+        content: ''
+        display: block
+        background-image: url('../../../img/Border.png')
+        background-size: 100% 100%
+        background-repeat: no-repeat
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+
+.services_item--lamp 
+    &:before
+        background-image: url('../../../img/services-card-1.png')
+
+.services_item--monitor
+    &:before
+        background-image: url('../../../img/services-card-2.png')
+
+.services_item--graph
+    &:before
+        background-image: url('../../../img/services-card-3.png')
+
+.services_item--wordpress
+    &:before
+        background-image: url('../../../img/services-card-4.png')        
+    
+.service_header
+    font-family: Montserrat
+    font-size: 13px
+    letter-spacing: 1.47px
+    text-transform: uppercase
+    display: block
+    margin: 0 auto 30px
+
+.service_desc
+    font-family: "Crimson Text - Roman"
+    font-size: 14px
+    letter-spacing: 1.4px
+    margin: 0 30px    

@@ -1,0 +1,157 @@
+@import ../../../config/_colors.sass
+    
+.history 
+    width: 100%
+    padding-top: 55px
+    padding-bottom: 150px
+    background-color: #efefef
+
+
+
+.timeline_list
+    // display: flex
+    // flex-wrap: wrap
+    // justify-content: space-between
+    position: relative
+    margin-top: 150px
+    // width: inherit
+
+.timeline_item
+    list-style: none
+    // width: 48%
+    border: 2px solid $dark-grey  
+    height: min-content 
+    color: $dark-grey
+    position: relative
+    text-align: left
+
+.timeline_item--odd
+    padding: 22px 55px 30px 21px   
+
+.timeline_item--even
+    padding: 25px 12px 30px 60px
+
+.timeline_header
+    font-family: 'Monserrat Regular'       
+    font-size: 13px
+    text-transform: uppercase
+    letter-spacing: 1px
+    word-spacing: 2px
+    margin-bottom: 5px
+
+.timeline_date
+    font-family: 'Monserrat Regular'       
+    font-size: 11px    
+    margin-bottom: 22px        
+
+.timeline_desc
+    font-family: 'Crimson Text - Roman'       
+    font-size: 14px   
+    line-height: 1.475
+    letter-spacing: 1px
+    word-spacing: 3px
+
+.timeline_desc--item1
+    margin-bottom: 17px
+
+.timeline_separator
+    position: absolute
+    width: 2px
+    top: -43px
+    bottom: -48px
+    background-color: $dark-grey
+    left: calc(50% - 1px)
+    // &:after
+    //     content: ''
+    //     width: 53px
+    //     height: 53px
+    //     background-color: $dark-grey
+    //     position: absolute
+    //     bottom: -53px
+    //     border-radius: 50%
+    //     left: -25px
+
+.timeline_point
+    border: 2px solid $dark-grey
+    position: absolute
+    border-radius: 50%
+    line-height: 70px
+    padding: 0 22px 
+    font-family: 'Monserrat Regular'       
+    font-size: 13px  
+
+.timeline_point--first
+    top: -74px
+    left: -37px
+
+.timeline_point--second
+    top: 62%
+    left: -38px   
+    background-color: #efefef 
+
+.timeline_image
+    width: 56px
+    height: 56px
+    position: absolute
+    bottom: -55px
+    border-radius: 50%
+    left: -26px
+
+.timeline_item--odd
+    &:before
+        content: ''
+        position: absolute
+        border: 6px solid transparent
+        border-left: 6px solid $dark-grey
+        border-top: 6px solid $dark-grey
+        right: -12px
+        top: 18px
+    &:after
+        content: ''
+        position: absolute
+        border: 5px solid transparent
+        border-left: 5px solid #efefef
+        border-top: 5px solid #efefef
+        right: -8px
+        top: 20px
+
+.timeline_item--even
+    &:before
+        content: ''
+        position: absolute
+        border: 6px solid transparent
+        border-right: 6px solid $dark-grey
+        border-top: 6px solid $dark-grey
+        left: -12px
+        top: 18px
+    &:after
+        content: ''
+        position: absolute
+        border: 5px solid transparent
+        border-right: 5px solid #efefef
+        border-top: 5px solid #efefef
+        left: -8px
+        top: 20px        
+
+.timeline_card 
+    display: flex
+    width: 604px
+    &:nth-child(even)
+        margin: -185px 0 15px auto
+
+.timeline_badge
+    width: 16px
+    height: 16px
+    background-color: $dark-grey
+    border-radius: 50%
+    flex-shrink: 0
+    margin: 13px 11px 0
+                
+.timeline_card.timeline_card--active
+    margin-bottom: 160px
+    .timeline_item
+        background-color: $light-grey
+        color: #cacaca 
+        &:after
+            border-right: 5px solid $light-grey
+            border-top: 5px solid $light-grey
