@@ -359,6 +359,8 @@
   padding-top: 55px;
   padding-bottom: 150px;
   background-color: #efefef;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .timeline_list {
@@ -531,6 +533,8 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   padding: 60px 0;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .team-gallery {
@@ -597,6 +601,8 @@
 
 .portfolio {
   padding-top: 50px;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .portfolio .main-desc {
@@ -627,6 +633,81 @@
 }
 
 .portfolio_gallery {
+  height: 680px;
+  overflow: hidden;
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gallery_lower, .gallery_upper {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gallery_lower {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.gallery_column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 25%;
+}
+
+.gallery_upper--col1 {
+  background-image: url("../../../img/portfolio-1.png");
+  height: 60%;
+}
+
+.gallery_lower--col1 {
+  background-image: url("../../../img/portfolio-2.png");
+}
+
+.gallery_upper--col2 {
+  background-image: url("../../../img/portfolio-3.png");
+  height: 43%;
+}
+
+.gallery_lower--col2 {
+  background-image: url("../../../img/portfolio-4.png");
+}
+
+.gallery_upper--col3 {
+  background-image: url("../../../img/portfolio-5.png");
+  height: 33%;
+}
+
+.gallery_lower--col3 {
+  background-image: url("../../../img/portfolio-6.png");
+}
+
+.gallery_upper--col4 {
+  background-image: url("../../../img/portfolio-7.png");
+  height: 64%;
+}
+
+.gallery_lower--col4 {
+  background-image: url("../../../img/portfolio-8.png");
+}
+
+.prices {
+  max-width: 1600px;
+  margin: 0 auto;
+  background-color: #e3e3e3;
+  padding: 44px 0 90px;
+}
+
+.prices_cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -634,14 +715,231 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.gallery_col {
-  width: 25%;
+.cards_item {
+  background-color: #fff;
+  padding: 45px 0 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #3e3d3d;
+  width: 31.5%;
 }
 
-.gallery_image {
-  width: 100%;
+.tariff_name {
+  font-family: "Montserrat";
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.47px;
+  margin-bottom: 25px;
+}
+
+.tariff_price {
+  font-family: "Montserrat";
+  font-size: 70px;
+  font-weight: 700;
+  position: relative;
+}
+
+.tariff_price:before {
+  content: '$';
+  position: absolute;
+  top: 5px;
+  left: -20px;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.tariff_desc {
+  margin-bottom: 50px;
+}
+
+.tariff_item {
+  font-family: "Crimson Text";
+  font-size: 16px;
+  font-style: italic;
+  line-height: 30px;
+}
+
+.tariff_img {
+  margin-bottom: 25px;
+}
+
+.commercial {
+  max-width: 1600px;
+  margin: 0 auto;
+  background-color: #2d2d2f;
+  padding: 35px 0;
+}
+
+.commercial .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+}
+
+.commercial_content {
+  margin: 0 128px 0 38px;
+}
+
+.commercial_header {
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 18px;
+  letter-spacing: 1.81px;
+  color: #d8d8d8;
+  margin-bottom: 20px;
+}
+
+.commercial_desc {
+  font-family: "Crimson Text";
+  font-size: 16px;
+  font-style: italic;
+  line-height: 20px;
+  color: #888888;
+}
+
+.commercial_btn {
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: 400;
+  color: #e3e3e3;
+  padding: 10px 30px;
+  border: 2px solid #e3e3e3;
+}
+
+.blog {
+  max-width: 1600px;
+  margin: 0 auto;
+  background-color: #e3e3e3;
+  padding-top: 54px;
+}
+
+.blog_desc {
+  margin-bottom: 70px;
+}
+
+.blog_items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.blog-cards_item {
+  width: 50%;
+  height: 412px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.blog-cards_image, .blog-cards_notice {
+  width: 50%;
+}
+
+.blog-cards_item--post1 .blog-cards_image {
+  background-image: url("../../../img/blog-post-1.png");
+  background-size: cover;
+}
+
+.blog-cards_item--post2 .blog-cards_image {
+  background-image: url("../../../img/blog-post-2.png");
+  background-size: cover;
+}
+
+.blog-cards_item--post3 .blog-cards_image {
+  background-image: url("../../../img/blog-post-3.png");
+  background-size: cover;
+}
+
+.blog-cards_item--post4 .blog-cards_image {
+  background-image: url("../../../img/blog-post-4.png");
+  background-size: cover;
+}
+
+.blog-cards_notice {
+  padding: 46px 48px 70px 37px;
+  background-color: #2d2d2f;
+}
+
+.blog-cards_title {
+  font-family: "Crimson Text";
+  font-size: 12px;
+  font-style: italic;
+  line-height: 18px;
+  color: #e3e3e3;
+  margin-bottom: 10px;
+}
+
+.blog-cards_hr {
+  background-color: #454545;
+  width: 151px;
+  height: 1px;
+  margin-bottom: 10px;
+}
+
+.blog-cards_postname {
+  font-family: "Montserrat";
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.47px;
+  line-height: 18px;
+  color: #e3e3e3;
+  display: block;
+  margin-bottom: 33px;
+}
+
+.blog-cards_postbody {
+  font-family: "Crimson Text - Roman";
+  font-size: 14px;
+  line-height: 20.31px;
+  letter-spacing: 1.4px;
+  color: #949494;
+}
+
+.clients {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 53px 0 120px;
+}
+
+.clients_desc {
+  margin-bottom: 70px;
+}
+
+.clients_brands {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 *, *:after, *:before {

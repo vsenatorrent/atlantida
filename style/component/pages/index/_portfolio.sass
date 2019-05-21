@@ -1,5 +1,7 @@
 .portfolio
     padding-top: 50px
+    max-width: 1600px
+    margin: 0 auto
     .main-desc
         margin-bottom: 50px
 
@@ -23,35 +25,49 @@
     color: #fff
 
 .portfolio_gallery
+    height: 680px
+    overflow: hidden
+    border: 1px solid black
     display: flex
-    flex-direction: row
-    
-.gallery_col
+
+.gallery_lower, .gallery_upper
+    background: 
+        size: cover
+        position: center
+        repeat: no-repeat
+
+.gallery_lower
+    flex-grow: 1
+
+.gallery_column
+    display: flex
+    flex-direction: column
     width: 25%
+  
+.gallery_upper--col1 
+    background-image: url('../../../img/portfolio-1.png')
+    height: 60%
 
-.gallery_image
-    width: 100% 
+.gallery_lower--col1 
+    background-image: url('../../../img/portfolio-2.png')
 
-.gallery_link
-//     display: block  
-//     margin-bottom: -5px
+.gallery_upper--col2 
+    background-image: url('../../../img/portfolio-3.png')
+    height: 43%
 
-// .gallery_col
-//     &:nth-child(odd)
-//         .gallery_link
-//             &:nth-child(odd)
-//                 .gallery_image
-//                     height: 415px
-//             &:nth-child(even)
-//                 .gallery_image
-//                     height: 275px                    
+.gallery_lower--col2 
+    background-image: url('../../../img/portfolio-4.png')    
 
-// .gallery_col
-//     &:nth-child(even)
-//         .gallery_link
-//             &:nth-child(odd)
-//                 .gallery_image
-//                     height: 306px
-//             &:nth-child(even)
-//                 .gallery_image
-//                     height: 384px                      
+.gallery_upper--col3 
+    background-image: url('../../../img/portfolio-5.png')
+    height: 33%
+
+.gallery_lower--col3 
+    background-image: url('../../../img/portfolio-6.png')      
+
+.gallery_upper--col4 
+    background-image: url('../../../img/portfolio-7.png')
+    height: 64%
+
+.gallery_lower--col4 
+    background-image: url('../../../img/portfolio-8.png')    
