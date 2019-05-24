@@ -15,37 +15,66 @@
 .team-gallery_item
     width: 31.3%
     position: relative
+    overflow: hidden
+    border-radius: 5%
+
+.team-gallery_item--item1
+    .social
+        transition: all 0.3s ease-out
+        transform: translateY(50px)
+    .team-gallery_name
+        transform: translateX(-100px)
+    .team-gallery_work
+        transform: translateX(-100px)
+    &:hover
+        .team-gallery_img
+            // transform: translateY(-15px)
+        .cards--two__rect
+            bottom: -78%    
+        .team-gallery_name
+            transform: translateX(0px)
+        .team-gallery_work
+            transform: translateX(0px)                
+        .social
+            transform: translateY(0px)
+        .cards--two__tri 
+            right: -100px     
+
 
 .team-gallery_name
-    display: block  
+    display: block
     font-family: Montserrat
-    font-size: 13px 
+    font-weight: 900
+    font-size: 14px
     margin-bottom: 9px
-
+    color: #fff
+    transition: all 0.3s ease-out
+    
 .team-gallery_work
     display: block
     font-family: "Crimson Text"
     font-size: 14px
-    font-style: italic   
+    font-style: italic
+    font-weight: bold   
     margin-bottom: 9px
+    transition: all 0.3s ease-out
 
 .team-gallery_img
     width: 100%    
+    height: 100%
 
 .team-gallery_caption
-    width: calc(100% - 16px)
-    height: calc(100% - 16px)
     position: absolute
-    top: 6px
-    left: 8px
-    background: rgba( 246, 246, 246, 0.9)
-    padding: 90% 20px 0
-    color: $dark-grey
+    left: 16px
+    bottom: 11px
+    color: #3e3d3d
     text-align: left
-    opacity: 0
-    transition: opacity 0.5s ease-out
+    // opacity: 1
+    -webkit-transition: all 0.5s ease-out
+    transition: all 0.5s ease-out
+    z-index: 5
 
-.hr
+.team_hr
     display: block
     height: 2px
     width: 54%
@@ -54,4 +83,193 @@
 
 .team-gallery_item:hover
     .team-gallery_caption
+        // opacity: 1
+
+.cards--two__rect 
+    width: 700px
+    height: 400px
+    background: #fff
+    display: block
+    position: absolute
+    bottom: -135%
+    left: -78%
+    transform: rotate(30deg)
+    z-index: 5
+    opacity: .9
+    -webkit-transition: all .3s ease-in-out
+    transition: all .3s ease-in-out
+    &:before
+        content: ''
+        display: block
+        width: 100%
+        position: relative
+        height: 100%
+        background: #f07306
+        transform: translateY(20px)
+        z-index: 2
+        -webkit-transition: all .3s ease-in-out
+        transition: all .3s ease-in-out
+        -webkit-transition-delay: .1s
+        transition-delay: .1s
+
+.cards--two__tri 
+    border-top: 220px solid transparent
+    border-bottom: 190px solid transparent
+    border-right: 288px solid #fff
+    opacity: .9
+    position: absolute
+    display: block
+    top: 0
+    right: -400px
+    -webkit-transition: all .3s ease-in-out
+    transition: all .3s ease-in-out
+    &:before
+        border-top: 220px solid transparent
+        border-bottom: 190px solid transparent
+        border-right: 288px solid #57ccfd
+        position: absolute
+        content: ''
+        display: block
+        top: -220px
+        right: -312px
+        -webkit-transition: all .3s ease-in-out
+        transition: all .3s ease-in-out
+        -webkit-transition-delay: .2s
+        transition-delay: .2s
+
+.team-gallery_item--item2
+    &:hover
+        .cards--three__rect-1
+            left: 10%
+        .shadow-1
+            left: -20%
+        .cards--three__rect-2
+            left: 60%
+            &:before
+                left: -100%
+            &:after
+                left: 80%
+        .shadow-2
+            left: -10%
+        .cards--three__circle
+            transform: scale(1)
+            &:before
+                transform: scale(0.9)
+
+.cards--three__rect-1
+    background: #fff
+    width: 200px
+    height: 110px
+    transform: skewX(-20deg)
+    display: block
+    position: absolute
+    top: 74%
+    opacity: .9
+    left: -100%
+    z-index: 0
+    transition: all .5s ease-in
+    
+.shadow-1
+    background: #9b1308
+    width: 230px
+    height: 100px
+    display: block
+    position: absolute
+    left: -200%
+    transition: all .3s ease-in
+
+.cards--three__rect-2
+    width: 100px
+    height: 70px
+    background: #fff
+    position: absolute
+    top: 65%
+    left: 1000%
+    opacity: .9
+    transform: skewX(-20deg)
+    transition: all .5s ease-in
+    &:before
+        content: ''
+        display: block
+        width: 50px
+        height: 40px
+        background: #57ccfd
         opacity: 1
+        position: absolute
+        left: 500%
+        top: 10%
+        transition: all .3s ease-in
+    &:after
+        content: ''
+        display: block
+        width: 50px
+        height: 40px
+        background: #9b1308
+        opacity: 1
+        position: absolute
+        left: 500%
+        top: 114%
+        transition: all .5s ease-in
+        transition-delay: .2s
+
+.shadow-2
+    background: #57ccfd
+    width: 100%
+    height: 100%
+    display: block
+    position: absolute
+    top: -10%
+    left: 500%
+    transition: all .5s ease-in
+    transition-delay: .2s
+
+.cards--three__circle
+    width: 220px
+    height: 220px
+    border-radius: 50%
+    background: #fff
+    position: absolute
+    top: -15%
+    left: 50%
+    opacity: .9
+    transform: scale(0)
+    transition: all .3s ease
+    &:before
+        content: ''
+        display: block
+        width: 100%
+        height: 100%
+        background: #9b1308
+        border-radius: 50%
+        transform: scale(0)
+        transition: all .3s ease
+        transition-delay: .2s
+
+.team-gallery_item--item2
+    .team-gallery_caption
+        bottom: 24px
+    .social
+        transition: all 0.3s ease-out
+        transform: translateY(50px)
+        position: absolute
+        top: 50%
+        left: 18%
+    .social_link
+        fill: #fff
+        &:hover
+            fill: #9696a2                
+    .team-gallery_name
+        transform: translateX(-150px)
+        z-index: 1
+    .team-gallery_work
+        transform: translateX(-150px)
+        color: #9da8ad
+    &:hover
+        .team-gallery_img
+            // transform: translateY(-15px)  
+        .team-gallery_name
+            transform: translateX(0px)
+        .team-gallery_work
+            transform: translateX(0px)                
+        .social
+            transform: translateY(0px)
