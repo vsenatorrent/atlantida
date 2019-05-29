@@ -18,10 +18,18 @@
     overflow: hidden
     border-radius: 5%
 
-.team-gallery_item--item1
+.team
     .social
         transition: all 0.3s ease-out
         transform: translateY(50px)
+    .social_icon
+        width: 16px
+        height: 16px
+        fill: #fff
+        &:hover
+            fill: #9696a2
+
+.team-gallery_item--item1
     .team-gallery_name
         transform: translateX(-100px)
     .team-gallery_work
@@ -94,7 +102,7 @@
     bottom: -135%
     left: -78%
     transform: rotate(30deg)
-    z-index: 5
+    z-index: 1
     opacity: .9
     -webkit-transition: all .3s ease-in-out
     transition: all .3s ease-in-out

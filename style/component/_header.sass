@@ -7,7 +7,7 @@
     margin: 0 auto
     position: fixed
     background-color: #fff
-    z-index: 2
+    z-index: 3
     .container
         display: flex
         justify-content: space-between
@@ -46,7 +46,12 @@
 
 .social
     display: flex
-
+.social_icon
+    width: 12px
+    height: 12px
+    fill: #a4a4a4
+    &:hover
+        fill: $green
 .social_item
     margin-right: 10px
     &:last-child

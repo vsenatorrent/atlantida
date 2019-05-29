@@ -18,7 +18,7 @@
   margin: 0 auto;
   position: fixed;
   background-color: #fff;
-  z-index: 2;
+  z-index: 3;
 }
 
 #header .container {
@@ -81,6 +81,16 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.social_icon {
+  width: 12px;
+  height: 12px;
+  fill: #a4a4a4;
+}
+
+.social_icon:hover {
+  fill: rgba(101, 179, 122, 0.3);
 }
 
 .social_item {
@@ -560,11 +570,21 @@
   border-radius: 5%;
 }
 
-.team-gallery_item--item1 .social {
+.team .social {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   -webkit-transform: translateY(50px);
           transform: translateY(50px);
+}
+
+.team .social_icon {
+  width: 16px;
+  height: 16px;
+  fill: #fff;
+}
+
+.team .social_icon:hover {
+  fill: #9696a2;
 }
 
 .team-gallery_item--item1 .team-gallery_name {
@@ -656,7 +676,7 @@
   left: -78%;
   -webkit-transform: rotate(30deg);
           transform: rotate(30deg);
-  z-index: 5;
+  z-index: 1;
   opacity: .9;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
@@ -1153,42 +1173,28 @@
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  height: 700px;
 }
 
 .blog-cards_item {
   width: 50%;
-  height: 412px;
+  height: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.blog-cards_image, .blog-cards_notice {
+.blog-cards_wrapper, .blog-cards_notice {
   width: 50%;
 }
 
-.blog-cards_item--post1 .blog-cards_image {
-  background-image: url("../../../img/blog-post-1.png");
-  background-size: cover;
-}
-
-.blog-cards_item--post2 .blog-cards_image {
-  background-image: url("../../../img/blog-post-2.png");
-  background-size: cover;
-}
-
-.blog-cards_item--post3 .blog-cards_image {
-  background-image: url("../../../img/blog-post-3.png");
-  background-size: cover;
-}
-
-.blog-cards_item--post4 .blog-cards_image {
-  background-image: url("../../../img/blog-post-4.png");
-  background-size: cover;
+.blog-cards_image {
+  width: 100%;
+  height: 100%;
 }
 
 .blog-cards_notice {
-  padding: 46px 48px 70px 37px;
+  padding: 7% 7% 10.5% 5.5%;
   background-color: #2d2d2f;
 }
 
@@ -1216,7 +1222,7 @@
   line-height: 18px;
   color: #e3e3e3;
   display: block;
-  margin-bottom: 33px;
+  margin-bottom: 13%;
 }
 
 .blog-cards_postbody {
@@ -1225,7 +1231,7 @@
   line-height: 20.31px;
   letter-spacing: 1.4px;
   color: #949494;
-  height: 204px;
+  height: 74%;
   overflow: hidden;
 }
 
@@ -1328,6 +1334,24 @@
 
 .cites_btn--current {
   background-color: #e3e3e3;
+}
+
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.swipe-wrap > div {
+  float: left;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .map {
