@@ -22,54 +22,28 @@
     background-color: $dark-grey
     color: #fff
 
-// .category_item:hover
-//     background-color: $dark-grey
-//     color: #fff
-
-.portfolio_gallery
-    height: 680px
+.portfolio-gallery
+    max-height: 680px
+    display: flex
     overflow: hidden
-    border: 1px solid black
-    display: flex
+    flex-wrap: wrap
 
-.gallery_lower, .gallery_upper
-    background: 
-        size: cover
-        position: center
-        repeat: no-repeat
-
-.gallery_lower
-    flex-grow: 1
-
-.gallery_column
-    display: flex
-    flex-direction: column
+.portfolio-gallery_item
     width: 25%
-  
-.gallery_upper--col1 
-    background-image: url('../../../img/portfolio-1.png')
+    // transition: all 0.5s ease
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+.portfolio-gallery_item--1
     height: 60%
 
-.gallery_lower--col1 
-    background-image: url('../../../img/portfolio-2.png')
-
-.gallery_upper--col2 
-    background-image: url('../../../img/portfolio-3.png')
+.portfolio-gallery_item--2
     height: 43%
 
-.gallery_lower--col2 
-    background-image: url('../../../img/portfolio-4.png')    
+.portfolio-gallery_item--3
+    height: 33%    
 
-.gallery_upper--col3 
-    background-image: url('../../../img/portfolio-5.png')
-    height: 33%
-
-.gallery_lower--col3 
-    background-image: url('../../../img/portfolio-6.png')      
-
-.gallery_upper--col4 
-    background-image: url('../../../img/portfolio-7.png')
+.portfolio-gallery_item--4
     height: 64%
-
-.gallery_lower--col4 
-    background-image: url('../../../img/portfolio-8.png')    

@@ -70,37 +70,37 @@ body
     border: 2px solid $dark-grey
     display: inline-block
 
-.animated-button
-    &:before
-        content: ""
-        position: absolute
-        height: 0%
-        left: 50%
-        top: 50%
-        width: 100%
-        transition: all 0.75s ease 0s
-        opacity: 0
-        background-size: 10px 10px
-        background-image: -webkit-linear-gradient( transparent 50%, rgba(181, 183, 186, 0.3) 50%)
-    &:hover
-        &:before
-            opacity: 1  
-            z-index: 1  
+// .animated-button
+//     &:before
+//         content: ""
+//         position: absolute
+//         height: 0%
+//         left: 50%
+//         top: 50%
+//         width: 100%
+//         transition: all 0.75s ease 0s
+//         opacity: 0
+//         background-size: 10px 10px
+//         background-image: -webkit-linear-gradient( transparent 50%, rgba(181, 183, 186, 0.3) 50%)
+//     &:hover
+//         &:before
+//             opacity: 1  
+//             z-index: 1  
 
-.animated-button--company
-    &:before
-        transform: translateX(-50%) translateY(-50%)
-    &:hover
-        &:before
-            height: 100% 
+// .animated-button--company
+//     &:before
+//         transform: translateX(-50%) translateY(-50%)
+//     &:hover
+//         &:before
+//             height: 100% 
 
-.animated-button--prices  
-    overflow: hidden 
-    &:before
-        transform: translateX(-50%) translateY(-50%) rotate(90deg)
-    &:hover
-        &:before
-            height: 600%         
+// .animated-button--prices  
+//     overflow: hidden 
+//     &:before
+//         transform: translateX(-50%) translateY(-50%) rotate(90deg)
+//     &:hover
+//         &:before
+//             height: 600%         
 
 .link-active
     border-bottom: 2px solid $green    
