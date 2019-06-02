@@ -6,7 +6,7 @@ const sectionVisible = (section, headerHeight) => {
 
 const anchorHandler = (scrolling) => {
   const anchors = document.querySelectorAll('a[href*="#"]');
-  const headerHeight = document.querySelector('#header').offsetHeight;
+  const headerHeight = document.querySelector('.navbar').offsetHeight;
   return () => {
     Array.from(anchors).forEach(function(item) {
       const section = document.querySelector('.' + item.getAttribute('href').slice(1));
@@ -21,8 +21,13 @@ const anchorHandler = (scrolling) => {
       } else {
         item.addEventListener('click', function(e) {
           e.preventDefault();
-          const coordY = section.getBoundingClientRect().top - headerHeight
-          window.scrollBy({ top: coordY, behavior: 'smooth' });
+          const coordY = section.getBoundingClientRect().top 
+          if (window.innerWidth > 767) {
+            window.scrollBy({ top: coordY - headerHeight, behavior: 'smooth' });
+          } else {
+            window.scrollBy({ top: coordY, behavior: 'smooth' });
+          }
+          
         });
       };
     });
@@ -42,8 +47,15 @@ const actualResizeBlogItems = () => {
   const hToWRatio = 52; // отношение высоты к ширине (%)
   blogContainer.style.height = blogContainer.offsetWidth * hToWRatio / 100 + 'px';
 }
+if(window.innerWidth > 767){
+  actualResizeBlogItems()
+}
 
-window.addEventListener("resize", actualResizeBlogItems);
+window.addEventListener("resize", ()=>{
+  if(window.innerWidth > 767){
+    actualResizeBlogItems()
+  }
+});
 
 
 // init slider for "cites" section
@@ -92,6 +104,7 @@ const actualResizePortfolioGallery = () => {
     galleryItem.style.marginTop = heightElementAboveMe - galleryRowMaxHeight - 2 + 'px'
   })
 }
+
 actualResizePortfolioGallery();
 window.addEventListener('resize', actualResizePortfolioGallery)
 
@@ -139,4 +152,13 @@ const portfolioGallery = document.querySelectorAll('.portfolio-gallery_item');
     })
 
   })
+})
+
+// burger menu
+
+const burgerBtn = document.querySelector('.header_trigger');
+const navbar = document.querySelector('.navbar');
+burgerBtn.addEventListener('click', ()=>{
+  navbar.classList.toggle('navbar-show');
+  burgerBtn.classList.toggle('triggered')
 })

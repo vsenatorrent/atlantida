@@ -1,0 +1,452 @@
+@import ../config/_mixins.sass
+    
+@include for-phone-only
+    .navbar
+        position: absolute
+        top: 0
+        bottom: 25px
+        height: 100vh
+        opacity: 0.95
+        padding-bottom: 0
+        .container
+            flex-direction: column
+
+    .logo
+        margin-bottom: 85px
+
+    .navbar_list
+        flex-direction: column
+        margin-bottom: 80px
+
+    .navbar_item
+        margin-right: 0
+        margin-bottom: 20px
+
+    .header_trigger
+        display: block
+
+    .social
+        justify-content: center
+
+    .social_item
+        margin-right: 25px
+
+    .about_bg
+        margin-bottom: 0
+
+    .main_header
+        margin-bottom: 15px
+
+    #content    
+        .main-desc
+            margin: 0 10px 35px
+
+    .about
+        .main-desc
+            margin: 0 10px 35px
+
+    .progress
+        width: 100%
+        padding-bottom: 0
+
+    .progress_list
+        flex-wrap: wrap
+
+    .progress_item
+        width: 49%
+        margin-bottom: 35px
+
+    .progress_text
+        margin: 0 auto 10px
+
+    .services
+        padding: 15px 10px 40px
+        .main-desc
+            margin: 0 10px 35px
+
+    .services_list
+        flex-wrap: wrap
+
+    .services_item
+        width: 100%
+        margin-bottom: 20px
+
+    .history
+        padding-top: 15px
+        padding-bottom: 20px
+
+    .timeline_list
+        margin: 0 10px 0
+
+    .timeline_separator
+        display: none
+
+    .timeline_card
+        width: 100%
+        display: block
+
+    .timeline_header
+        font-weight: bold
+
+    .timeline_card.timeline_card--active
+        .timeline_item
+            background-color: inherit
+            color: inherit
+            &:after
+                content: none
+
+    .timeline_badge
+        display: none
+
+    .timeline_item
+        border: none
+        &:before
+            content: none
+
+    .timeline_item--odd
+        padding: 22px 50px 10px 5px
+
+    .timeline_item--even
+        padding: 22px 5px 10px 50px
+
+    .timeline_card:nth-child(even)
+        margin: 0 auto
+
+    .team
+        padding: 15px 0
+
+    .team-gallery
+        width: 100%
+        padding: 0 10px
+        flex-direction: row
+
+    .team-gallery_caption
+        left: 8px
+        right: 8px
+
+    .portfolio
+        padding-top: 15px
+
+    .prices
+        padding-bottom: 20px
+
+    .prices_cards
+        padding: 0 10px
+        flex-wrap: wrap
+
+    .cards_item
+        width: 100%
+        margin-bottom: 20px
+
+    .commercial
+        padding: 15px 10px
+        .container
+            flex-direction: column
+            
+    
+    .commercial_image
+        margin-bottom: 15px
+
+    .commercial_content
+        margin: 0 auto 15px
+
+    .blog
+        padding-top: 15px
+
+    .blog_items
+        height: auto
+        padding: 0 10px
+
+    .blog-cards_item
+        width: 100%
+        height: auto
+        margin-bottom: 15px
+
+    .blog-cards_wrapper
+        display: none
+
+    .blog-cards_notice
+        width: 100%
+
+    .blog-cards_postname
+        margin-bottom: 20px
+
+    .blog-cards_postbody
+        height: auto
+        margin-bottom: 20px
+
+    .clients
+        padding-top: 15px
+
+    .clients_brands
+        flex-wrap: wrap
+
+    .cites_position
+        padding-bottom: 20px
+
+    .map
+        display: none
+
+    .company_info
+        order: 1
+
+    .contact
+        padding: 25px 10px
+
+    .company_signIn
+        width: 100%
+
+    .company_info
+        width: 100%
+        padding-right: 0
+        .social
+            justify-content: flex-start
+            margin-bottom: 30px
+
+@include for-low-res-tablet
+    .navbar
+        position: absolute
+        top: 0
+        left: 0
+        height: 100vh
+        opacity: 0.95
+        padding-bottom: 0
+        .container
+            flex-direction: column
+
+    .logo
+        margin-bottom: 85px
+
+    .navbar_list
+        flex-direction: column
+        margin-bottom: 80px
+
+    .navbar_item
+        margin-right: 0
+        margin-bottom: 20px
+
+    .header_trigger
+        display: block
+
+    .social
+        justify-content: center
+
+    .social_item
+        margin-right: 25px    
+
+    .progress
+        width: 100%
+        padding-bottom: 0
+
+    .progress_list
+        flex-wrap: wrap
+
+    .progress_item
+        width: 49%
+        margin-bottom: 35px
+
+    .progress_text
+        margin: 0 auto 10px
+
+    .services
+        padding: 70px 15px 80px
+        .main-desc
+            margin: 0 10px 35px
+
+    .services_list
+        flex-wrap: wrap
+
+    .services_item
+        width: 48%
+        margin-bottom: 30px
+        padding: 31px 12px 30px
+
+    .history
+        padding-bottom: 30px
+
+    .timeline_list
+        margin: 0 10px 0
+
+    .timeline_separator
+        display: none
+
+    .timeline_card
+        width: 100%
+        display: block
+
+    .timeline_header
+        font-weight: bold
+
+    .timeline_card.timeline_card--active
+        .timeline_item
+            background-color: inherit
+            color: inherit
+            &:after
+                content: none
+
+    .timeline_badge
+        display: none
+
+    .timeline_item
+        border: none
+        &:before
+            content: none
+
+    .timeline_item--odd
+        padding: 22px 50px 10px 5px
+
+    .timeline_item--even
+        padding: 22px 5px 10px 50px
+
+    .timeline_card:nth-child(even)
+        margin: 0 auto
+
+    .team
+        padding: 15px 0
+
+    .team-gallery
+        width: 100%
+        padding: 0 10px
+        flex-direction: row
+
+    .team-gallery_caption
+        left: 8px
+        right: 8px
+
+    .prices
+        padding-left: 20px
+        padding-right: 20px
+
+    .prices_cards
+        padding: 0 10px
+        flex-wrap: wrap
+
+    .cards_item
+        width: 32%
+        margin-bottom: 20px
+        padding: 25px 5px 0
+
+    .tariff_desc
+        margin-bottom: 25px
+
+    .tariff_img
+        margin-bottom: 10px
+
+    .tariff_price
+        font-size: 60px
+
+    .commercial
+        padding: 20px 20px
+        .container
+            flex-direction: column
+            
+    .commercial_image
+        margin-bottom: 15px
+
+    .commercial_content
+        margin: 0 auto 15px
+
+    .blog
+        padding: 20px
+
+    .blog_items
+        height: auto
+        padding: 0 10px
+
+    .blog-cards_item
+        width: 100%
+        height: auto
+        margin-bottom: 15px
+
+    .blog-cards_wrapper
+        display: none
+
+    .blog-cards_notice
+        width: 100%
+
+    .blog-cards_postname
+        margin-bottom: 20px
+
+    .blog-cards_postbody
+        height: auto
+        margin-bottom: 20px
+
+    .clients
+        padding-top: 15px
+
+    .clients_brands
+        flex-wrap: wrap
+
+    .cites_position
+        padding-bottom: 20px
+
+    .map
+        display: none
+
+    .company_info
+        order: 1
+
+    .contact
+        padding: 30px 20px
+
+    .company_signIn
+        width: 100%
+
+    .company_info
+        width: 100%
+        padding-right: 0
+        .social
+            justify-content: flex-start
+            margin-bottom: 30px
+
+
+@include for-tablets-ipads
+    .navbar
+        display: block
+    #header
+        .logo_name
+            display: none
+    .progress
+        padding-bottom: 33px
+    .services
+        padding-left: 10px
+        padding-right: 10px
+    .services_item
+        padding: 32px 5px 25px
+    .service_header
+        margin-bottom: 20px
+    .history
+        padding-left: 10px
+        padding-right: 10px
+    .timeline_card
+        width: 52.5%
+    .commercial
+        padding: 35px 10px
+    .contact
+        padding-left: 10px
+        padding-right: 10px
+
+@include for-laptops
+    .navbar
+        display: block
+    .services
+        padding-left: 20px
+        padding-right: 20px
+    .history
+        padding-left: 20px
+        padding-right: 20px
+    .timeline_card
+        width: 52%
+    .prices
+        padding-left: 20px
+        padding-right: 20px
+    .commercial
+        padding-left: 20px
+        padding-right: 20px
+    .contact
+        padding-left: 20px
+        padding-right: 20px
+
+@include for-desktops
+    .navbar
+        display: block
