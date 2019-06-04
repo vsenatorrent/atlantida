@@ -47,7 +47,7 @@
       -ms-flex-align: center;
           align-items: center;
   position: fixed;
-  padding: 25px 0;
+  padding: 25px 20px;
   background-color: #fff;
   left: 0;
   right: 0;
@@ -181,7 +181,7 @@
 .header_trigger {
   position: absolute;
   top: 0;
-  right: -10px;
+  right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -264,6 +264,10 @@
 
 .navbar-show {
   display: block;
+}
+
+.overflow {
+  overflow: hidden;
 }
 
 .about {
@@ -380,7 +384,7 @@
 .services {
   background-image: url("../../../img/services-bg.png");
   background-repeat: no-repeat;
-  padding: 70px 0 80px;
+  padding: 70px 20px 80px;
   background-position: center;
   background-size: cover;
 }
@@ -470,8 +474,7 @@
 
 .history {
   width: 100%;
-  padding-top: 55px;
-  padding-bottom: 150px;
+  padding: 55px 20px 150px;
   background-color: #efefef;
   max-width: 1600px;
   margin: 0 auto;
@@ -819,7 +822,7 @@
   max-width: 1600px;
   margin: 0 auto;
   background-color: #e3e3e3;
-  padding: 44px 0 90px;
+  padding: 44px 20px 90px;
 }
 
 .prices_cards {
@@ -895,7 +898,7 @@
   max-width: 1600px;
   margin: 0 auto;
   background-color: #2d2d2f;
-  padding: 35px 0;
+  padding: 35px 20px;
 }
 
 .commercial .container {
@@ -967,6 +970,7 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   height: 700px;
+  overflow: hidden;
 }
 
 .blog-cards_item {
@@ -987,7 +991,7 @@
 }
 
 .blog-cards_notice {
-  padding: 7% 7% 0 5.5%;
+  padding: 20px;
   background-color: #2d2d2f;
 }
 
@@ -1024,8 +1028,10 @@
   line-height: 20.31px;
   letter-spacing: 1.4px;
   color: #949494;
-  height: 40%;
+  height: 50%;
   overflow: hidden;
+  -webkit-column-width: 110px;
+          column-width: 110px;
 }
 
 .clients {
@@ -1159,7 +1165,7 @@
 .contact {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 50px 0 35px;
+  padding: 50px 20px 35px;
   background-color: #292929;
 }
 
@@ -1473,6 +1479,8 @@
   .blog-cards_postbody {
     height: auto;
     margin-bottom: 20px;
+    -webkit-column-width: auto;
+            column-width: auto;
   }
   .clients {
     padding-top: 15px;
@@ -1524,6 +1532,9 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .about_btn--portfolio {
+    width: 120px;
   }
   .logo {
     margin-bottom: 85px;
@@ -1698,6 +1709,8 @@
   .blog-cards_postbody {
     height: auto;
     margin-bottom: 20px;
+    -webkit-column-width: auto;
+            column-width: auto;
   }
   .clients {
     padding-top: 15px;
@@ -1745,19 +1758,11 @@
   .progress {
     padding-bottom: 33px;
   }
-  .services {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
   .services_item {
     padding: 32px 5px 25px;
   }
   .service_header {
     margin-bottom: 20px;
-  }
-  .history {
-    padding-left: 10px;
-    padding-right: 10px;
   }
   .timeline_card {
     width: 52.5%;
@@ -1765,9 +1770,8 @@
   .commercial {
     padding: 35px 10px;
   }
-  .contact {
-    padding-left: 10px;
-    padding-right: 10px;
+  .blog-cards_postbody {
+    height: 35%;
   }
 }
 
@@ -1775,28 +1779,8 @@
   .navbar {
     display: block;
   }
-  .services {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  .history {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
   .timeline_card {
     width: 52%;
-  }
-  .prices {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  .commercial {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  .contact {
-    padding-left: 20px;
-    padding-right: 20px;
   }
 }
 

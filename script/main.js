@@ -5,7 +5,8 @@ const sectionVisible = (section, headerHeight) => {
 }
 
 const anchorHandler = (scrolling) => {
-  const anchors = document.querySelectorAll('a[href*="#"]');
+  // const anchors = document.querySelectorAll('a[href*="#"]')
+  const anchors = document.querySelectorAll('.navbar_link');
   const headerHeight = document.querySelector('.navbar').offsetHeight;
   return () => {
     Array.from(anchors).forEach(function(item) {
@@ -19,8 +20,12 @@ const anchorHandler = (scrolling) => {
         }
       // обработчик события "click"
       } else {
+        
         item.addEventListener('click', function(e) {
           e.preventDefault();
+          document.body.classList.remove('overflow');
+          navbar.classList.remove('navbar-show');
+          burgerBtn.classList.remove('triggered')
           const coordY = section.getBoundingClientRect().top 
           if (window.innerWidth > 767) {
             window.scrollBy({ top: coordY - headerHeight, behavior: 'smooth' });
@@ -42,10 +47,13 @@ scrollTo();
 
 // установка высоты .blog_items в зависимости от ширины окна браузера
 
-const actualResizeBlogItems = () => {
+const actualResizeBlogItems = (auto) => {
   const blogContainer = document.querySelector('.blog_items');
   const hToWRatio = 52; // отношение высоты к ширине (%)
   blogContainer.style.height = blogContainer.offsetWidth * hToWRatio / 100 + 'px';
+  if(auto){
+    blogContainer.style.height = 'auto'
+  }
 }
 if(window.innerWidth > 767){
   actualResizeBlogItems()
@@ -54,6 +62,8 @@ if(window.innerWidth > 767){
 window.addEventListener("resize", ()=>{
   if(window.innerWidth > 767){
     actualResizeBlogItems()
+  } else {
+    actualResizeBlogItems('auto')
   }
 });
 
@@ -161,4 +171,16 @@ const navbar = document.querySelector('.navbar');
 burgerBtn.addEventListener('click', ()=>{
   navbar.classList.toggle('navbar-show');
   burgerBtn.classList.toggle('triggered')
-})
+  document.body.classList.toggle('overflow');
+}, true)
+
+// window.addEventListener('click', (e)=>{
+//   if(!e.target.matches('.header_trigger')){
+//     setTimeout(()=>{
+//       navbar.classList.remove('navbar-show');
+//       burgerBtn.classList.remove('triggered')
+//     },2000)
+    
+//   }
+//   console.log(e.target);
+// })
