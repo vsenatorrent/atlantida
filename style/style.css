@@ -1030,8 +1030,8 @@
   color: #949494;
   height: 50%;
   overflow: hidden;
-  -webkit-column-width: 110px;
-          column-width: 110px;
+  -webkit-column-width: auto;
+          column-width: auto;
 }
 
 .clients {
@@ -1772,6 +1772,8 @@
   }
   .blog-cards_postbody {
     height: 35%;
+    -webkit-column-width: 110px;
+            column-width: 110px;
   }
 }
 
