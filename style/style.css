@@ -1,13 +1,13 @@
 @font-face {
   font-family: "Monserrat Regular";
-  src: url("../../fonts/Montserrat-Regular.ttf") format("truetype");
+  src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Crimson Text - Roman";
-  src: url("../../fonts/CrimsonText-Roman.ttf") format("truetype");
+  src: url("../fonts/CrimsonText-Roman.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
@@ -113,7 +113,7 @@
 }
 
 .company {
-  background-image: url(../../../../img/main-screen-bg.png);
+  background-image: url(../img/main-screen-bg.png);
   background-position: 50% 0;
   background-repeat: no-repeat;
   padding-top: 190px;
@@ -152,7 +152,7 @@
   text-transform: uppercase;
   margin-bottom: 35px;
   position: relative;
-  background-image: url(../../../../img/line.png);
+  background-image: url(../img/line.png);
   background-size: 100% 100%;
   padding: 30px 0;
 }
@@ -166,6 +166,7 @@
   padding: 10px 20px;
   background-color: transparent;
   position: relative;
+  text-transform: capitalize;
 }
 
 .company_btn:after {
@@ -173,7 +174,7 @@
   position: absolute;
   height: 50px;
   width: 15px;
-  background-image: url(../../../../img/arrow.png);
+  background-image: url(../img/arrow.png);
   left: calc(50% - 15px / 2);
   top: 83%;
 }
@@ -342,7 +343,7 @@
 }
 
 .progress_item--medal:before {
-  background-image: url("../../../../img/awards-icon-1.png");
+  background-image: url("../img/awards-icon-1.png");
   width: 38px;
   height: 41px;
 }
@@ -364,25 +365,25 @@
 }
 
 .progress_item--success:before {
-  background-image: url("../../../../img/awards-icon-2.png");
+  background-image: url("../img/awards-icon-2.png");
   width: 41px;
   height: 40px;
 }
 
 .progress_item--client:before {
-  background-image: url("../../../../img/awards-icon-3.png");
+  background-image: url("../img/awards-icon-3.png");
   width: 33px;
   height: 39px;
 }
 
 .progress_item--reviews:before {
-  background-image: url("../../../../img/awards-icon-4.png");
+  background-image: url("../img/awards-icon-4.png");
   width: 41px;
   height: 37px;
 }
 
 .services {
-  background-image: url("../../../img/services-bg.png");
+  background-image: url("../img/services-bg.png");
   background-repeat: no-repeat;
   padding: 70px 20px 80px;
   background-position: center;
@@ -431,7 +432,7 @@
 .services_item:after {
   content: '';
   display: block;
-  background-image: url("../../../img/Border.png");
+  background-image: url("../img/Border.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   position: absolute;
@@ -442,19 +443,19 @@
 }
 
 .services_item--lamp:before {
-  background-image: url("../../../img/services-card-1.png");
+  background-image: url("../img/services-card-1.png");
 }
 
 .services_item--monitor:before {
-  background-image: url("../../../img/services-card-2.png");
+  background-image: url("../img/services-card-2.png");
 }
 
 .services_item--graph:before {
-  background-image: url("../../../img/services-card-3.png");
+  background-image: url("../img/services-card-3.png");
 }
 
 .services_item--wordpress:before {
-  background-image: url("../../../img/services-card-4.png");
+  background-image: url("../img/services-card-4.png");
 }
 
 .service_header {
@@ -497,10 +498,12 @@
 
 .timeline_item--odd {
   padding: 22px 55px 30px 21px;
+  margin-right: 20px;
 }
 
 .timeline_item--even {
   padding: 25px 12px 30px 60px;
+  margin-left: 20px;
 }
 
 .timeline_header {
@@ -613,11 +616,16 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 604px;
+  width: 50%;
+  position: relative;
 }
 
 .timeline_card:nth-child(even) {
   margin: -185px 0 15px auto;
+}
+
+.timeline_card:nth-child(even) .timeline_badge {
+  left: -8px;
 }
 
 .timeline_badge {
@@ -627,7 +635,9 @@
   border-radius: 50%;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  margin: 13px 11px 0;
+  position: absolute;
+  right: -8px;
+  top: 14px;
 }
 
 .timeline_card.timeline_card--active {
@@ -645,7 +655,7 @@
 }
 
 .team {
-  background-image: url("../../../img/our-team-bg.png");
+  background-image: url("../img/our-team-bg.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   padding: 60px 0;
@@ -1057,7 +1067,7 @@
   max-width: 1600px;
   margin: 0 auto;
   padding: 70px 0 81px;
-  background-image: url("../../../img/cites-bg.png");
+  background-image: url("../img/cites-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1764,9 +1774,6 @@
   .service_header {
     margin-bottom: 20px;
   }
-  .timeline_card {
-    width: 52.5%;
-  }
   .commercial {
     padding: 35px 10px;
   }
@@ -1780,9 +1787,6 @@
 @media (min-width: 1025px) and (max-width: 1280px) {
   .navbar {
     display: block;
-  }
-  .timeline_card {
-    width: 52%;
   }
 }
 
